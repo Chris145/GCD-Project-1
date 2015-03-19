@@ -9,13 +9,27 @@ This document describes the output file, and the process used to get to it.
 
 ##Output Summary
 
-The output file contains a summary of the variables listed in the following section. Each variable has been
+The output file contains a summary of the variables listed in the Variable List section. Each variable has been
 grouped by the following : 
 
 * Subject
 * Activity
 
 The statistical method used to summarise the data is "mean". NA values have been removed. 
+
+##Transformations
+
+Various transformations had to be done to the data to produce the final result. 
+
+* Originally, the Test and Train data were in two seperate files. These were combined into a single file during analysis (and are combined in the final result).
+
+* The original files also contained a much larger number of measurements. Only the Mean and Standard Deviation were chosen to be summised, and the end result reflects this. 
+
+* The variable names were also cleaned, as originally they had symbols such as "()" and "-" which made the names difficult to read. 
+
+* Activities were originally in a seperate file to the measurements, and also in numeric form rather than a text description. These activites were combined into a single file, and translated into the text description.
+
+* Finally, Subject was also not present in the original measurement files, and was combined in the analysis process.
 
 ##Variable List
 
@@ -86,4 +100,10 @@ Below is a list of all variables present in the output file. All variables are N
 * fBodyBodyAccJerkMag Mean
 * fBodyBodyAccJerkMag STD
 * fBodyBodyGyroMag Mean    
+
+
+
+##Appendix
+
+Please see run_analysis.R in this repository for the code used for analysis. 
 
